@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "ICMS Graceful",
+  "description": "Graceful ICMS UI.",
+  "version": "1.0",
+  "icons":{
+    "16": "icon.jpg",
+    "48": "icon.jpg",
+    "128":"icon.jpg"
+  },
+  "permissions": [
+    "http://icms.baidu.com:8080/cmscript/fire/id/cms_tplplatform_task/*"
+  ],
+  "background": {
+    "scripts": []
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://icms.baidu.com:8080/cmscript/fire/id/cms_tplplatform_task/*"],
+      "css": ["graceful.css"],
+      "js": ["content.js"]
+    }
+  ]
+}

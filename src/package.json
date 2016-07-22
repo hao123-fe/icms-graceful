@@ -1,0 +1,14 @@
+{
+  "name": "icms-graceful",
+  "version": "1.0.0",
+  "description": "",
+  "main": "content.js",
+  "author": "Dafrok <o.o@mug.dog>",
+  "scripts": {
+    "build": "browserify ./js/index.js > ./content.js "
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jquery": "^3.1.0"
+  }
+}
