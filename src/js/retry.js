@@ -21,12 +21,12 @@ function retry(retryList, $node) {
         .then(json => {
             if (json.result && !json.soap_result) {
                 // success
-                var count = $node.data('retry-count')
-                $node.val((count - retryList.length) + ' / ' + count)
             } else {
                 // failed
                 $node.css({color: 'red'})
             }
+            var count = $node.data('retry-count')
+            $node.val((count - retryList.length + 1) + ' / ' + count)
             retryList.shift()
             retry(retryList, $node)
         })
